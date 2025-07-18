@@ -37,11 +37,12 @@ public class EmployeeController {
         return employeeService.getEmployeeByJob(job);
     }
 
-//    @PostMapping("/employee")
-//    public String postMethod(@RequestBody Employee employee){
-////        Employee employee = new Employee(5,"Sivagami", "Business");
-//        return employeeService.addEmployee(employee);
-//    }
+    @PostMapping("/employee")
+    public String postMethod(@RequestBody Employee employee){
+//        Employee employee = new Employee(5,"Sivagami", "Business");
+        return employeeService.addEmployee(employee);
+    }
+
     @PutMapping("/employee")
     public String putMethod(@RequestBody Employee employee){
         return employeeService.updateEmployee(employee);
